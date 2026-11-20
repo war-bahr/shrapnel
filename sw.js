@@ -1,0 +1,66 @@
+/* SHRAPNEL offline shell. Bump CACHE when shipping a new build. */
+const CACHE = 'shrapnel-v1-0';
+const ASSETS = [
+  "./",
+  "./assets/barlow-condensed-latin-500-normal-BgYH2mbd.woff2",
+  "./assets/barlow-condensed-latin-500-normal-HIEiP5Ov.woff",
+  "./assets/barlow-condensed-latin-700-normal-Dmwat-ge.woff",
+  "./assets/barlow-condensed-latin-700-normal-v1xN8_Wq.woff2",
+  "./assets/index-Co_I6g6N.js",
+  "./assets/index-hCRvMMvu.css",
+  "./assets/teko-latin-500-normal-CnS-PWFz.woff2",
+  "./assets/teko-latin-500-normal-DJUwy4_e.woff",
+  "./assets/teko-latin-600-normal-CSggg3rU.woff",
+  "./assets/teko-latin-600-normal-Cj5MAY47.woff2",
+  "./favicon.svg",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png",
+  "./icons/icon-maskable-512.png",
+  "./index.html",
+  "./manifest.webmanifest",
+  "./portraits/bo.webp",
+  "./portraits/gus.webp",
+  "./portraits/kira.webp",
+  "./portraits/maya.webp"
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE);
+    for (const url of ASSETS) {
+      try { await cache.add(url); } catch (e) { /* one miss must not fail the whole install */ }
+    }
+    await self.skipWaiting();
+  })());
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys.filter((key) => key !== CACHE).map((key) => caches.delete(key)));
+    await self.clients.claim();
+  })());
+});
+
+self.addEventListener('fetch', (event) => {
+  if (event.request.method !== 'GET') return;
+  event.respondWith((async () => {
+    const cached = await caches.match(event.request, { ignoreSearch: true });
+    if (cached) return cached;
+    try {
+      const response = await fetch(event.request);
+      if (response.ok && new URL(event.request.url).origin === self.location.origin) {
+        const copy = response.clone();
+        caches.open(CACHE).then((cache) => cache.put(event.request, copy)).catch(() => {});
+      }
+      return response;
+    } catch (e) {
+      const dest = event.request.destination;
+      const nav = event.request.mode === 'navigate' || dest === 'document';
+      // Never fall back to index.html for scripts/styles — that leaves the boot
+      // screen up forever when a PWA update races or the network blips.
+      if (nav) return (await caches.match('./index.html')) || Promise.reject(e);
+      return Promise.reject(e);
+    }
+  })());
+});
