@@ -1,13 +1,13 @@
 /* SHRAPNEL offline shell. Bump CACHE when shipping a new build. */
-const CACHE = 'shrapnel-v1-2-4';
+const CACHE = 'shrapnel-v1-3';
 const ASSETS = [
   "./",
   "./assets/barlow-condensed-latin-500-normal-BgYH2mbd.woff2",
   "./assets/barlow-condensed-latin-500-normal-HIEiP5Ov.woff",
   "./assets/barlow-condensed-latin-700-normal-Dmwat-ge.woff",
   "./assets/barlow-condensed-latin-700-normal-v1xN8_Wq.woff2",
-  "./assets/index-1fTAJxrK.css",
-  "./assets/index-iUF9SLc0.js",
+  "./assets/index-Cfrw1Axp.js",
+  "./assets/index-DsWI0oIh.css",
   "./assets/teko-latin-500-normal-CnS-PWFz.woff2",
   "./assets/teko-latin-500-normal-DJUwy4_e.woff",
   "./assets/teko-latin-600-normal-CSggg3rU.woff",
@@ -19,9 +19,15 @@ const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
   "./portraits/bo.webp",
+  "./portraits/dax.webp",
   "./portraits/gus.webp",
+  "./portraits/hiro.webp",
+  "./portraits/ingrid.webp",
   "./portraits/kira.webp",
-  "./portraits/maya.webp"
+  "./portraits/mara.webp",
+  "./portraits/maya.webp",
+  "./portraits/tomas.webp",
+  "./portraits/vulcan.webp"
 ];
 
 self.addEventListener('install', (event) => {
