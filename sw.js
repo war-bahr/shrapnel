@@ -1,13 +1,13 @@
 /* SHRAPNEL offline shell. Bump CACHE when shipping a new build. */
-const CACHE = 'shrapnel-v1-4';
+const CACHE = 'shrapnel-v1-5';
 const ASSETS = [
   "./",
   "./assets/barlow-condensed-latin-500-normal-BgYH2mbd.woff2",
   "./assets/barlow-condensed-latin-500-normal-HIEiP5Ov.woff",
   "./assets/barlow-condensed-latin-700-normal-Dmwat-ge.woff",
   "./assets/barlow-condensed-latin-700-normal-v1xN8_Wq.woff2",
-  "./assets/index-BuE2XArY.css",
-  "./assets/index-Ci0Z-OuG.js",
+  "./assets/index-BreuBvmc.js",
+  "./assets/index-CmlLm-Sx.css",
   "./assets/teko-latin-500-normal-CnS-PWFz.woff2",
   "./assets/teko-latin-500-normal-DJUwy4_e.woff",
   "./assets/teko-latin-600-normal-CSggg3rU.woff",
@@ -21,6 +21,8 @@ const ASSETS = [
   "./portraits/abby.webp",
   "./portraits/amara.webp",
   "./portraits/bo.webp",
+  "./portraits/calloway_rex.webp",
+  "./portraits/calloway_rhea.webp",
   "./portraits/dax.webp",
   "./portraits/felix.webp",
   "./portraits/gus.webp",
@@ -41,6 +43,10 @@ const ASSETS = [
   "./portraits/ruben.webp",
   "./portraits/sergei.webp",
   "./portraits/tomas.webp",
+  "./portraits/ug_brick.webp",
+  "./portraits/ug_furnace.webp",
+  "./portraits/ug_kingpin.webp",
+  "./portraits/ug_rat.webp",
   "./portraits/vulcan.webp",
   "./portraits/yuki.webp",
   "./portraits/zara.webp"
