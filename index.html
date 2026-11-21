@@ -14,8 +14,8 @@
   <link rel="apple-touch-icon" href="./icons/icon-192.png" />
   <link rel="manifest" href="./manifest.webmanifest" />
   <style>html,body{background:#050506;height:100%;margin:0;overflow:hidden}#boot{z-index:99;color:#ffd9bf;letter-spacing:.3em;background:radial-gradient(circle at 50% 40%,#2a1206,#050506 70%);flex-direction:column;justify-content:center;align-items:center;font:700 15px system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;transition:opacity .5s;display:flex;position:fixed;top:0;bottom:0;left:0;right:0}#boot.hide{opacity:0;pointer-events:none}#boot .ring{border:3px solid #ff6a1a33;border-top-color:#ff6a1a;border-radius:50%;width:56px;height:56px;margin-bottom:18px;animation:.8s linear infinite sp}@keyframes sp{to{transform:rotate(360deg)}}</style>
-  <script type="module" crossorigin src="./assets/index-DCzCMi0O.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DdACa7-a.css">
+  <script type="module" crossorigin src="./assets/index-s-CqfAAv.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DId-4wXR.css">
 </head>
 <body>
   <div id="boot"><div class="ring"></div><div>SHRAPNEL</div><div id="bootSub" style="opacity:.6;font-size:11px;margin-top:8px">CHARGING BATTERIES…</div></div>
@@ -25,6 +25,7 @@
   <div id="ctl" hidden>
     <div id="stickZone"><div id="stickBase"><div id="stickKnob"></div></div><div id="stickHint">DRIVE</div></div>
     <button id="btnRight" class="selfright" hidden>⟲<small>SELF-RIGHT</small></button>
+    <button id="btnFire" hidden><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" class="trk"/><circle id="fuelRing" cx="50" cy="50" r="46" class="ring"/></svg><b>🔥</b><small id="fuelLbl">FIRE</small></button>
     <button id="btnWpn"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" class="trk"/><circle id="wpnRing" cx="50" cy="50" r="46" class="ring"/></svg><b id="wpnIcon">✷</b><small id="wpnLbl">SPIN</small></button>
   </div>
   <div id="reel" hidden></div>
