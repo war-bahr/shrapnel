@@ -1,13 +1,13 @@
 /* SHRAPNEL offline shell. Bump CACHE when shipping a new build. */
-const CACHE = 'shrapnel-v1-5-1';
+const CACHE = 'shrapnel-v1-6';
 const ASSETS = [
   "./",
   "./assets/barlow-condensed-latin-500-normal-BgYH2mbd.woff2",
   "./assets/barlow-condensed-latin-500-normal-HIEiP5Ov.woff",
   "./assets/barlow-condensed-latin-700-normal-Dmwat-ge.woff",
   "./assets/barlow-condensed-latin-700-normal-v1xN8_Wq.woff2",
-  "./assets/index-Bdh8Ns6W.js",
-  "./assets/index-DLb2PTzX.css",
+  "./assets/index-DfkI312q.js",
+  "./assets/index-Dn0_Vs2L.css",
   "./assets/teko-latin-500-normal-CnS-PWFz.woff2",
   "./assets/teko-latin-500-normal-DJUwy4_e.woff",
   "./assets/teko-latin-600-normal-CSggg3rU.woff",
@@ -23,6 +23,9 @@ const ASSETS = [
   "./portraits/bo.webp",
   "./portraits/calloway_rex.webp",
   "./portraits/calloway_rhea.webp",
+  "./portraits/ch_glacier.webp",
+  "./portraits/ch_kestrel.webp",
+  "./portraits/ch_viper.webp",
   "./portraits/dax.webp",
   "./portraits/felix.webp",
   "./portraits/gus.webp",
@@ -30,9 +33,16 @@ const ASSETS = [
   "./portraits/hiro.webp",
   "./portraits/ingrid.webp",
   "./portraits/isabela.webp",
+  "./portraits/kade.webp",
   "./portraits/kenji.webp",
   "./portraits/kira.webp",
   "./portraits/lena.webp",
+  "./portraits/m_doc.webp",
+  "./portraits/m_fuma.webp",
+  "./portraits/m_fuma_lock.webp",
+  "./portraits/m_grim.webp",
+  "./portraits/m_showtime.webp",
+  "./portraits/m_tanaka.webp",
   "./portraits/magnus.webp",
   "./portraits/mara.webp",
   "./portraits/maya.webp",
@@ -49,7 +59,8 @@ const ASSETS = [
   "./portraits/ug_rat.webp",
   "./portraits/vulcan.webp",
   "./portraits/yuki.webp",
-  "./portraits/zara.webp"
+  "./portraits/zara.webp",
+  "./story/dealer_booth.webp"
 ];
 
 self.addEventListener('install', (event) => {
