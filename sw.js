@@ -1,12 +1,12 @@
 /* SHRAPNEL offline shell. Bump CACHE when shipping a new build. */
-const CACHE = 'shrapnel-v1-10';
+const CACHE = 'shrapnel-v1-11';
 const ASSETS = [
   "./",
   "./assets/barlow-condensed-latin-500-normal-BgYH2mbd.woff2",
   "./assets/barlow-condensed-latin-500-normal-HIEiP5Ov.woff",
   "./assets/barlow-condensed-latin-700-normal-Dmwat-ge.woff",
   "./assets/barlow-condensed-latin-700-normal-v1xN8_Wq.woff2",
-  "./assets/index-CJIiXzvk.js",
+  "./assets/index-C5eiwCNS.js",
   "./assets/index-DmWr-ar2.css",
   "./assets/teko-latin-500-normal-CnS-PWFz.woff2",
   "./assets/teko-latin-500-normal-DJUwy4_e.woff",
